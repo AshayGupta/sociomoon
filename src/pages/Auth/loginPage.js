@@ -46,15 +46,6 @@ const LoginPage = () => {
             margin="normal"
             variant="outlined"
             defaultValue="8587961435"
-            InputProps={{
-              endAdornment: (
-                <InputAdornment position="end">
-                  <IconButton>
-                    <VisibilityOff color="error" />
-                  </IconButton>
-                </InputAdornment>
-              ),
-            }}
           />
 
           {/* Password Field */}
@@ -65,30 +56,30 @@ const LoginPage = () => {
             variant="outlined"
             type={showPassword ? "text" : "password"}
             defaultValue="password"
-            InputProps={{
-              endAdornment: (
-                <InputAdornment position="end">
-                  <IconButton onClick={() => setShowPassword(!showPassword)}>
-                    {showPassword ? <Visibility color="error" /> : <VisibilityOff color="error" />}
-                  </IconButton>
-                </InputAdornment>
-              ),
+            slotProps={{
+              input: {
+                endAdornment: (
+                  <InputAdornment position="end">
+                    <IconButton onClick={() => setShowPassword(!showPassword)}>
+                      {showPassword ? <Visibility color="error" /> : <VisibilityOff color="error" />}
+                    </IconButton>
+                  </InputAdornment>
+                ),
+              },
             }}
           />
 
           {/* Remember Me & Forgot Password */}
           <Box display="flex" justifyContent="space-between" alignItems="center" my={2}>
             <FormControlLabel control={<Checkbox />} label="Remember" />
-            <Link href="#" underline="none">
-              Lost password?
-            </Link>
+            <Link href="#" underline="none">Lost password?</Link>
           </Box>
 
           {/* Login Button */}
           <Button
             fullWidth
             variant="contained"
-            sx={{ backgroundColor: "blue", fontWeight: "bold", fontSize: "16px" }}
+            sx={{ backgroundColor: "#0a50d8", color: "#fff", fontSize: "16px" }}
           >
             LOGIN
           </Button>
