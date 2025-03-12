@@ -8,7 +8,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Suspense } from "react";
 import HomeLayout from "../pages/Home/homeLayout";
 import PageNotFound from "../common/components/notFound/pageNotFound"
-import { Home } from "../pages/Home/home";
+import HomePage from "../pages/Home/homePage";
+import LoginPage from "../pages/Auth/loginPage";
 
 const AppRoutes = () => {
   return (
@@ -17,10 +18,11 @@ const AppRoutes = () => {
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
           <Route path="/" element={<HomeLayout />}>
-            <Route index element={<Home />} />
+            <Route index element={<HomePage />} />
             {/* <Route path="about" element={<About />} /> */}
           </Route>
-
+          <Route path="/login" element={<LoginPage />} />
+          
           {/* Protected Route */}
           {/* <Route
             path="/dashboard"

@@ -1,17 +1,16 @@
 import { Box, Drawer, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Toolbar, Typography } from "@mui/material";
-import DashboardIcon from "@mui/icons-material/Dashboard";
-import HomeIcon from "@mui/icons-material/Home";
-import SettingsIcon from "@mui/icons-material/Settings";
-import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { HomeOutlinedIcon, InfoOutlinedIcon, LogoutIcon, MailOutlineIcon } from "../../../assets/muiIcons";
 
 export const AppSideDrawer = ({drawerWidth}) => {
   const [open, setOpen] = useState(true);
   const navigate = useNavigate();
   const drawerOptions = [
-    { text: "Home", icon: <HomeIcon />, navigate: "/"},
-    { text: "Dashboard", icon: <DashboardIcon />, navigate: "/" },
-    { text: "Settings", icon: <SettingsIcon />, navigate: "/" },
+    { text: "Home", icon: <HomeOutlinedIcon />, navigate: "/"},
+    { text: "About Us", icon: <InfoOutlinedIcon />, navigate: "/" },
+    { text: "Contact Us", icon: <MailOutlineIcon />, navigate: "/" },
+    { text: "Logout", icon: <LogoutIcon />, navigate: "/" },
   ];
 
   const drawer = (
