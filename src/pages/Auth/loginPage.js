@@ -13,9 +13,11 @@ import {
   CardContent,
 } from "@mui/material";
 import { Visibility, VisibilityOff } from "@mui/icons-material";
+import { useNavigate } from "react-router-dom";
 
 const LoginPage = () => {
   const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <Box
@@ -34,59 +36,54 @@ const LoginPage = () => {
             </Typography>
           </Box>
 
-          {/* Login Heading */}
-          <Typography variant="h5" fontWeight="bold" mb={2}>
-            Login
-          </Typography>
+          <Typography variant="h5" sx={{marginBottom: '20px !important', justifySelf: 'center'}}>Login</Typography>
 
-          {/* Mobile Number Field */}
-          <Typography fontWeight="bold">Mobile No</Typography>
-          <TextField
-            fullWidth
-            margin="normal"
-            variant="outlined"
-            defaultValue="8587961435"
-          />
+          <Box sx={{marginBottom: "20px"}}>
+            <Typography>Mobile No</Typography>
+            <TextField
+              fullWidth
+              variant="outlined"
+              defaultValue="8587961435"
+            />
+          </Box>
 
-          {/* Password Field */}
-          <Typography fontWeight="bold">Your Password</Typography>
-          <TextField
-            fullWidth
-            margin="normal"
-            variant="outlined"
-            type={showPassword ? "text" : "password"}
-            defaultValue="password"
-            slotProps={{
-              input: {
-                endAdornment: (
-                  <InputAdornment position="end">
-                    <IconButton onClick={() => setShowPassword(!showPassword)}>
-                      {showPassword ? <Visibility color="error" /> : <VisibilityOff color="error" />}
-                    </IconButton>
-                  </InputAdornment>
-                ),
-              },
-            }}
-          />
+          <Box sx={{marginBottom: "20px"}}>
+            <Typography>Your Password</Typography>
+            <TextField
+              fullWidth
+              variant="outlined"
+              type={showPassword ? "text" : "password"}
+              defaultValue="password"
+              slotProps={{
+                input: {
+                  endAdornment: (
+                    <InputAdornment position="end">
+                      <IconButton onClick={() => setShowPassword(!showPassword)}>
+                        {showPassword ? <Visibility color="error" /> : <VisibilityOff color="error" />}
+                      </IconButton>
+                    </InputAdornment>
+                  ),
+                },
+              }}
+            />
+          </Box>
 
-          {/* Remember Me & Forgot Password */}
           <Box display="flex" justifyContent="space-between" alignItems="center" my={2}>
             <FormControlLabel control={<Checkbox />} label="Remember" />
             <Link href="#" underline="none">Lost password?</Link>
           </Box>
 
-          {/* Login Button */}
           <Button
             fullWidth
             variant="contained"
             sx={{ backgroundColor: "#0a50d8", color: "#fff", fontSize: "16px" }}
+            onClick={() => navigate("/")}
           >
             LOGIN
           </Button>
 
-          {/* Signup Link */}
           <Typography textAlign="center" mt={2}>
-            Not registered? <Link href="#">SignUp</Link>
+            Not registered? <Link href="/signup">SignUp</Link>
           </Typography>
         </CardContent>
       </Card>

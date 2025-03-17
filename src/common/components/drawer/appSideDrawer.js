@@ -10,7 +10,7 @@ export const AppSideDrawer = ({drawerWidth}) => {
     { text: "Home", icon: <HomeOutlinedIcon />, navigate: "/"},
     { text: "About Us", icon: <InfoOutlinedIcon />, navigate: "/" },
     { text: "Contact Us", icon: <MailOutlineIcon />, navigate: "/" },
-    { text: "Logout", icon: <LogoutIcon />, navigate: "/" },
+    { text: "Logout", icon: <LogoutIcon />, navigate: "/login" },
   ];
 
   const drawer = (

@@ -24,7 +24,6 @@ const AppTheme = createTheme({
     MuiButton: {
       styleOverrides: {
         root: {
-          borderRadius: "8px",
           textTransform: "none",
         },
       },

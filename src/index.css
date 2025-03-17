@@ -7,7 +7,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.MuiInputBase-root {
+  height: 40px !important;
+}
+.MuiTypography-root {
+  margin-bottom: 3px !important;
 }

@@ -10,6 +10,7 @@ import HomeLayout from "../pages/Home/homeLayout";
 import PageNotFound from "../common/components/notFound/pageNotFound"
 import HomePage from "../pages/Home/homePage";
 import LoginPage from "../pages/Auth/loginPage";
+import SignupPage from "../pages/Auth/signupPage";
 
 const AppRoutes = () => {
   return (
@@ -22,6 +23,7 @@ const AppRoutes = () => {
             {/* <Route path="about" element={<About />} /> */}
           </Route>
           <Route path="/login" element={<LoginPage />} />
+          <Route path="/signup" element={<SignupPage />} />
           
           {/* Protected Route */}
           {/* <Route
