@@ -6,6 +6,7 @@ import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import InfoIcon from '@mui/icons-material/Info';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
+import MenuIcon from "@mui/icons-material/Menu";
 
 export {
   DashboardIcon,
@@ -15,5 +16,6 @@ export {
   MailOutlineIcon,
   InfoIcon,
   InfoOutlinedIcon,
-  HomeOutlinedIcon
+  HomeOutlinedIcon,
+  MenuIcon
 };

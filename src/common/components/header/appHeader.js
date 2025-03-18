@@ -1,5 +1,5 @@
 import { AppBar, IconButton, Toolbar, Typography } from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
+import { MenuIcon } from "../../../assets/muiIcons";
 
 export const AppHeader = () => {
   const handleDrawerToggle = () => {};
